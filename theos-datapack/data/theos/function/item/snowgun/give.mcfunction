@@ -1,0 +1,3 @@
+advancement revoke @s only theos:craft/craft_item_snowgun
+clear @s knowledge_book
+give @s music_disc_mall[item_name='{"bold":true,"color":"blue","text":"Snow gun"}',lore=['"Snowball fights just got a lot harder"'],rarity="rare",custom_data={"theos":1b,"item":"snowgun"},attribute_modifiers={modifiers:[{id:"block_interaction_range",type:"player.block_interaction_range",amount:-5,operation:"add_value"}],show_in_tooltip:false},food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:100000000}] 1

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "group": "weapon",
+    "pattern": [
+      " i ",
+      "ibi",
+      " i "
+    ],
+    "key": {
+      "i": {
+        "item": "minecraft:ice"
+      },
+      "b": {
+        "item": "minecraft:crossbow"
+      }
+    },
+    "result": {
+      "id": "minecraft:knowledge_book",
+      "count": 1
+    }
+  }
+  

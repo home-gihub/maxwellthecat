@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "theos:infested-apple"
+      }
+    }
+  },
+  "rewards": {
+    "function": "theos:item/infested-apple/item_infested-apple_give"
+  }
+}

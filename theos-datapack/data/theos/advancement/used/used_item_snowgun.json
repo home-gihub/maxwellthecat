@@ -1,0 +1,22 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:music_disc_mall",
+            "components": {
+              "minecraft:custom_data": {
+                "theos": true,
+                "item":"snowgun"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "theos:item/snowgun/onuse"
+    }
+  }
+  

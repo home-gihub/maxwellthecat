@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "theos:superpunch"
+      }
+    }
+  },
+  "rewards": {
+    "function": "theos:item/superpunch/item_superpunch_give"
+  }
+}

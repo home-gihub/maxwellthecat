@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "equipment",
+    "group": "weapon",
+    "ingredients": [
+      {
+        "item": "minecraft:nether_star"
+      },
+      {
+        "item": "minecraft:wind_charge"
+      }
+    ],
+    "result": {
+      "id": "minecraft:knowledge_book",
+      "count": 1
+    }
+  }
+  

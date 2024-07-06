@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "theos:screamability"
+      }
+    }
+  },
+  "rewards": {
+    "function": "theos:item/screamability/item_screamability_give"
+  }
+}

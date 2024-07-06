@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "theos:ice-bow"
+      }
+    }
+  },
+  "rewards": {
+    "function": "theos:item/icebow/item_ice-bow_give"
+  }
+}

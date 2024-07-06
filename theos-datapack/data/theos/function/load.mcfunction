@@ -1,0 +1,1 @@
+tellraw @a {"hoverEvent":{"action":"show_text","value":[{"text":"","color":"gold","bold":true}]},"text":"Theo's Datapack Loaded! Have fun."}

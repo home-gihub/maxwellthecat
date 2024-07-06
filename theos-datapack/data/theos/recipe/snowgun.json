@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "minecraft:nether_star"
+      },
+      {
+        "item": "powder_snow_bucket"
+      },
+      {
+        "item": "redstone"
+      }
+    ],
+    "result": {
+      "id": "minecraft:knowledge_book",
+      "count": 1
+    }
+  }
+  
