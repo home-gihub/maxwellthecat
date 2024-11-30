@@ -1,0 +1,22 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:music_disc_chirp",
+            "components": {
+              "minecraft:custom_data": {
+                "theos": true,
+                "item":"screamability"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "theos:item/screamability/item_screamability_onuse"
+    }
+  }
+  

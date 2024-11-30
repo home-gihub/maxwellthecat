@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      [
+        "minecraft:cobblestone"
+      ],
+      [
+        "minecraft:golden_apple"
+      ]
+    ],
+    "result": {
+      "id": "minecraft:item_frame",
+      "components": {
+        "minecraft:item_name": "\"Big Dirt Block\"",
+        "minecraft:custom_data": {
+          "theos": true,
+          "item": "big_cstone_block"
+        },
+        "minecraft:entity_data": {
+          "id": "minecraft:item_frame",
+          "Tags": [
+            "theos",
+            "big_cstone_block"
+          ]
+        }
+      },
+      "count": 1
+    }
+  }

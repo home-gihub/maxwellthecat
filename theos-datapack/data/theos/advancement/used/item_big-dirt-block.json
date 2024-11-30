@@ -1,0 +1,31 @@
+{
+    "criteria": {
+      "item": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "player": {
+            "equipment": {
+              "mainhand": {
+                "items": "minecraft:item_frame",
+                "components": {
+                  "minecraft:custom_data": {
+                    "theos": true,
+                    "item": "big_dirt_block"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "item"
+      ]
+    ],
+    "rewards": {
+      "function": "theos:item/big-dirt-block/onuse"
+    },
+    "sends_telemetry_event": false
+  }

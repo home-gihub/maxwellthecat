@@ -1,0 +1,4 @@
+execute at @s run execute at @e[limit=1,sort=nearest,type=minecraft:item_frame] run summon block_display ~ ~ ~ {NoGravity:1b,Silent:1b,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-1.5f,0f,-1.5f],scale:[3f,3f,3f]},block_state:{Name:"minecraft:dirt"}}
+
+execute at @s run execute at @e[limit=1,sort=nearest,type=minecraft:block_display] run summon shulker ~-0.5 ~ ~-0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,CanPickUpLoot:0b,AttachFace:0b,ArmorItems:[{},{},{},{id:"minecraft:egg",count:1,components:{"minecraft:attribute_modifiers":[{id:"scale",type:"scale",amount:2,operation:"add_value"}]}}],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}]}
+advancement revoke @s only theos:used/item_big-dirt-block
