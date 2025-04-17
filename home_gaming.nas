@@ -39,6 +39,74 @@ quit
 
 // --- STEVE'S LAVA CHICKEN END --- //
 
+// --- Eye open/close --- //
+#EyeClose
+    gui barColor 000000 1
+    gui barSize 0
+    delay 500
+    gui barSize 0.25
+    delay 500
+    gui barSize 0.50
+    delay 500
+    gui barSize 0.75
+    delay 500
+    gui barSize 1
+quit
+
+#EyeOpen
+    gui barColor 000000 1
+    gui barSize 1
+    delay 500
+    gui barSize 0.75
+    delay 500
+    gui barSize 0.50
+    delay 500
+    gui barSize 0.25
+    delay 500
+    gui barSize 0
+quit
+
+#Blink
+    call #EyeClose
+    call #EyeOpen
+quit
+// --- Eye open/close END --- //
+
+
+// --- Beer --- //
+#FindBeer
+    freeze
+    item get BEER
+    msg Type "/in BEER" in the chat to drink the beer!
+    unfreeze
+quit
+
+#BeerDontHave
+    msg *You don't have any beer*
+quit
+
+#DrinkBeer
+    ifnot item BEER jump #BeerDontHave
+    item take Beer
+    msg *You drink the beer*
+    motd horspeed=0.9
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    call #Blink
+    gui reset
+    motd ignore
+quit
+// --- Beer END --- //
+
+
+
 // --- UnStuck --- //
 #UnStuck
     unfreeze
@@ -55,8 +123,12 @@ quit
 
 // --- INPUT HOOK --- //
 #input
+    // --- food --- //
     set chicken CHICKEN
     if runArg1|=|chicken jump #SteveLavaChickenEat
+    set beer BEER
+    if runArg1|=|beer jump #SteveLavaChickenEat
+    // --- food END --- //
 quit
 // --- INPUT HOOK END --- //
 
