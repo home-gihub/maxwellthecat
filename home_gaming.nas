@@ -56,6 +56,7 @@ quit
 
 // --- INPUT HOOK --- //
 #input
+    set chicken CHICKEN
     if runArg1|=|chicken jump #SteveLavaChickenEat
 quit
 // --- INPUT HOOK END --- //
