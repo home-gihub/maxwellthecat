@@ -24,7 +24,6 @@ quit
     item take LAVACHICKEN
     msg *You eat the lava chicken*
     motd horspeed=90
-    boost 0 10 0 0 0 0
     delay 10000
     motd ignore
 quit
