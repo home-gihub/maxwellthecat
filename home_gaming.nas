@@ -4,7 +4,11 @@
 quit
 // --- INPUT HOOK END --- //
 
-
+// --- UnStuck --- //
+#UnStuck
+    unfreeze
+quit
+// --- UnStuck END --- //
 
 // --- STEVE'S LAVA CHICKEN --- //
 #SteveLavaChicken
