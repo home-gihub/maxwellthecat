@@ -105,6 +105,34 @@ quit
 quit
 // --- Beer END --- //
 
+// --- Rocket jump --- //
+#FindRocket
+    item give ROCKETLAUNCHER
+    set rocketHave true
+    msg Type "/in rocket enable" in the chat to enable it or "/in rocket disable" to disable it
+quit
+
+#RocketDontHave
+    msg *You don't have a rocket launcher*
+quit
+
+#RocketShoot
+    set rbf {click.pitch}
+    setmul rbf 10
+    boost 0 click.pitch 0 0 0 0
+quit
+
+#RocketEnable 
+    ifnot rocketHave|=|true jump #RocketDontHave
+    clickevent async register #RocketShoot
+quit
+
+#RocketDisable 
+    ifnot rocketHave|=|true jump #RocketDontHave
+    clickevent async unregister
+quit
+
+// --- Rocket jump END --- //
 
 
 // --- UnStuck --- //
@@ -124,12 +152,17 @@ quit
 // --- INPUT HOOK --- //
 #input
     // --- food/drinks --- //
-    set chicken CHICKEN
     if runArg1|=|chicken jump #SteveLavaChickenEat
-    set beer BEER
     if runArg1|=|beer jump #DrinkBeer
     // --- food/drinks END --- //
 quit
 // --- INPUT HOOK END --- //
 
-
+// --- JOIN HOOK --- //
+#onJoin
+    set beer BEER
+    set chicken CHICKEN
+    set rocketHave false
+    definehotkey RocketLauncherShoot
+quit
+// -- JOIN HOOK END --- //
