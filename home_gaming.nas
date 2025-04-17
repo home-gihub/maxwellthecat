@@ -56,7 +56,7 @@ quit
 
 // --- INPUT HOOK --- //
 #input
-    if runArg1|=|CHICKEN jump #SteveLavaChickenEat
+    if runArg1|=|chicken jump #SteveLavaChickenEat
 quit
 // --- INPUT HOOK END --- //
 
