@@ -10,8 +10,8 @@ quit
 #SteveLavaChicken
     freeze
     msg Jack Black (as Steve): Would you like some lava chicken?
-    reply 0|Yes|#SteveLavaChickenYes
-    reply 1|No|#SteveLavaChickenNo
+    reply 1|Yes|#SteveLavaChickenYes
+    reply 2|No|#SteveLavaChickenNo
     
     unfreeze
 quit
