@@ -33,8 +33,15 @@ quit
     msg Jack Black (as Steve): Ok. I'll be here if you need anything.
 quit
 
+#SteveLavaChickenDontHave
+    msg *You don't have any lava chicken to eat*
+quit
+
 #SteveLavaChickenEat
+    ifnot item LAVACHICKEN jump #SteveLavaChickenDontHave
+    item take LAVACHICKEN
     motd horspeed=90
+    boost 0 10 0
     delay 10000
     motd ignore
 quit
