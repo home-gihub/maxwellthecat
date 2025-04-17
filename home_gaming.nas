@@ -123,12 +123,12 @@ quit
 
 // --- INPUT HOOK --- //
 #input
-    // --- food --- //
+    // --- food/drinks --- //
     set chicken CHICKEN
     if runArg1|=|chicken jump #SteveLavaChickenEat
     set beer BEER
-    if runArg1|=|beer jump #SteveLavaChickenEat
-    // --- food END --- //
+    if runArg1|=|beer jump #DrinkBeer
+    // --- food/drinks END --- //
 quit
 // --- INPUT HOOK END --- //
 
