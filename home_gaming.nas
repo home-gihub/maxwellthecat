@@ -152,6 +152,10 @@ quit
 // --- Rainbow block --- //
 #RB.Cycle
     // i love oss
+    msg runArg1 is:
+    msg {runArg1}
+    msg runArg2 is:
+    msg {runArg2}
     set 34 34
     setadd runArg1 1
     if runArg1|<=|34 set runArg1 21
