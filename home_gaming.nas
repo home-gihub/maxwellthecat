@@ -159,14 +159,14 @@ quit
     // bruh 3
     set a {runArg1}
     setadd a 1
-    if a|>=|34 set runArg1 21
+    if a|>=|34 set a 20
     tempblock {a} {runArg2} {runArg3} {runArg4} false
     delay 700
     jump #RB.Cycle|{a}|{runArg2}|{runArg3}|{runArg4}
 quit 
 
 #RB.FromMB
-    set runArg1 21
+    set runArg1 20
     set runArg2 {MBX}
     set runArg3 {MBY}
     setadd runArg3 1
