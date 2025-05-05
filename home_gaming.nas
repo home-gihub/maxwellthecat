@@ -153,10 +153,10 @@ quit
 #RB.Cycle
     // i love oss
     // bruh 2
-    msg {runArg1}
     set 34 34
     setadd runArg1 1
     if runArg1|>=|34 set runArg1 21
+    msg tempblock {runArg1} {runArg2} {runArg3} {runArg4} false
     tempblock {runArg1} {runArg2} {runArg3} {runArg4} false
     delay 700
     jump #RB.Cycle|{runArg1}|{runArg2}|{runArg3}|{runArg4}
