@@ -162,7 +162,7 @@ quit
     if a|>=|34 set a 20
     setadd a 1
     tempblock {a} {runArg2} {runArg3} {runArg4} false
-    delay 700
+    delay 300
     jump #RB.Cycle|{a}|{runArg2}|{runArg3}|{runArg4}
 quit 
 
