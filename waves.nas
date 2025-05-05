@@ -1,4 +1,5 @@
 #WAV.Cycle
+    delay 100
     setsplit runArg1 " "
     tempblock PlayerHeldBlock runArg1[0] 1 runArg1[2]
     newthread #WAV.Cycle|{click.coords}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
