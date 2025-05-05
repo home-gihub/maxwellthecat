@@ -149,6 +149,25 @@ quit
 quit
 // --- Uranium END ---//
 
+// --- Rainbow block --- //
+#RB.Cycle
+    if runArg1|<=|33 jump #RB.Cycle|21|runArg2|runArg3|runArg4
+    tempblock {runArg1} {runArg2} {runArg3} {runArg4} false
+    setadd runArg1 1
+    delay 50
+    jump #RB.Cycle|runArg1|runArg2|runArg3|runArg4
+quit 
+
+#RB.FromMB
+    set runArg1 21
+    set runArg2 {MBX}
+    set runArg3 {MBY}
+    setadd runArg3 1
+    set runArg4 {MBZ}
+    jump #RB.Cycle|runArg1|runArg2|runArg3|runArg4
+quit 
+// --- Rainbow block END ---//
+
 // --- INPUT HOOK --- //
 #input
     // --- food/drinks --- //
