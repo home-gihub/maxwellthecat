@@ -182,6 +182,5 @@ quit
     set beer BEER
     set chicken CHICKEN
     set rocketHave false
-    definehotkey RocketLauncherShoot
 quit
 // -- JOIN HOOK END --- //
