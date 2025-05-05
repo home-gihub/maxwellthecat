@@ -157,13 +157,13 @@ quit
     // bruh 2
     set 1 1
     // bruh 3
-    set a {runArg1}
+    set RB.{runArg5}.Count {runArg1}
     
-    if a|>=|34 set a 20
-    setadd a 1
-    tempblock {a} {runArg2} {runArg3} {runArg4} false
+    if RB.{runArg5}.Count|>=|34 set a 20
+    setadd RB.{runArg5}.Count 1
+    tempblock {RB.{runArg5}.Count} {runArg2} {runArg3} {runArg4} false
     delay 300
-    jump #RB.Cycle|{a}|{runArg2}|{runArg3}|{runArg4}
+    jump #RB.Cycle|{RB.{runArg5}.Count}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
 quit 
 
 #RB.FromMB
@@ -172,7 +172,9 @@ quit
     set runArg3 {MBY}
     setadd runArg3 1
     set runArg4 {MBZ}
-    jump #RB.Cycle|{runArg1}|{runArg2}|{runArg3}|{runArg4}
+    setadd RB.numInstances 1
+    set runArg5 {RB.numInstances}
+    jump #RB.Cycle|{runArg1}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
 quit 
 // --- Rainbow block END ---//
 
