@@ -178,6 +178,54 @@ quit
 quit 
 // --- Rainbow block END ---//
 
+// --- firework --- //
+#FW.Cycle
+    // i love oss
+    // bruh 1
+    set expllvl 130
+    if {runArg1}|=|expllvl effect explosion {runArg2} {runArg3} {runArg4} {runArg2}|{runArg3}|{runArg4}|
+    setadd expllvl 1
+    setadd runArg3 1
+
+    jump #RB.Cycle|{runArg1}|{runArg2}|{runArg3}|{runArg4}|
+quit 
+
+#FW.FromMB
+    set runArg1 0
+    set runArg2 {MBX}
+    set runArg3 {MBY}
+    setadd runArg3 1
+    set runArg4 {MBZ}
+    jump #FW.Cycle|{runArg1}|{runArg2}|{runArg3}|{runArg4}|
+quit 
+// --- firework END ---//
+
+// --- mobs --- //
+#Mobs.attack
+    set runArg1 {runArg1}
+    setsplit runArg1 .
+    setsub runArg1[2] 2
+    if {runArg1[2]}|<|0 cmd /bot remove {runArg1}
+    set botnm {runArg1[0]}.{runArg1[1]}.{runArg1[2]}.mob
+    cmd /bot rename {runArg1} {botnm}
+    
+quit 
+
+#Mobs.addbot
+    // runarg1 - mob model
+    // runarg2 - mob initial health
+    // runarg3 - bot ai
+    // runarg4 - bot name
+
+    // [name].[model].[health].mob
+    set botnm {runArg4}.{runArg1}.{runArg2}.mob
+    cmd /bot add {botnm}
+    cmd /bot text {botnm} /oss #Mobs.attack|{botnm}
+    cmd /model bot {botnm} {runArg1}
+    cmd /botset {botnm} {runArg3}
+quit
+// --- mobs end --- //
+
 // --- INPUT HOOK --- //
 #input
     // --- food/drinks --- //

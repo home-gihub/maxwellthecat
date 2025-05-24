@@ -1,51 +1,23 @@
-#WAV.Cycle
-    delay 100
-    setsplit runArg1 " "
-    tempblock {PlayerHeldBlock} {runArg1[0]} 1 {runArg1[2]} false
-    newthread #WAV.Cycle|{click.coords}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsplit runArg1 " "
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd runArg1[0] 1
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub runArg1[0] 2
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd runArg1[0] 1
-    setadd runArg1[2] 1
-    setadd runArg1[0] 1
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub runArg1[0] 2
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd runArg1[0] 1
-    setsub runArg1[2] 2
-    setadd runArg1[0] 1
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub runArg1[0] 2
-    newthread #WAV.Cycle|{runArg1[0]} {runArg1[1]} {runArg1[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd runArg1[0] 1
-quit 
-
-#WAV.FromClick
-    setsplit click.coords " "
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd click.coords[0] 1
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub click.coords[0] 2
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd click.coords[0] 1
-    setadd click.coords[2] 1
-    setadd click.coords[0] 1
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub click.coords[0] 2
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd click.coords[0] 1
-    setsub click.coords[2] 2
-    setadd click.coords[0] 1
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setsub click.coords[0] 2
-    newthread #WAV.Cycle|{click.coords[0]} {click.coords[1]} {click.coords[2]}|{runArg2}|{runArg3}|{runArg4}|{runArg5}
-    setadd click.coords[0] 1
+#Rainbow.Cycle
+    setadd c[0] 1
+    setadd c[1] 2
+    setadd c[2] 3
+    if c[0]|>|255 set c[0] 0
+    if c[1]|>|255 set c[1] 0
+    if c[2]|>|255 set c[2] 0
+    settohexcolor hexCode c
+    env fog {hexCode}
+    env cloud {hexCode}
+    env sky {hexCode}
+    env skybox {hexCode}
+    delay 10
+    jump #Rainbow.Cycle
 quit 
 
 #onJoin 
-    clickevent async register #WAV.FromClick
+    set 255 255
+    set c[0] 255
+    set c[1] 255
+    set c[2] 255
+    jump #Rainbow.Cycle
 quit
